@@ -13,15 +13,24 @@ namespace ConsoleApplication1
     
     static double findAvg(int[] arr)
     {
-      double avg = 0.0;
-      int sum = 0;
+      int summ = 0;
       for (int i = 0; i < arr.Length; ++i)
       {
-        sum += arr[i];
+        summ += arr[i];
+      }
+      return (double)summ / arr.Length;;
+    }
+    
+    static int findMax(int[] arr)
+    {
+      int max = arr[0];
+      for (int i = 1; i < arr.Length; ++i)
+      {
+        if (arr[i] > max)
+          max = arr[i];
       }
 
-      avg = (double)sum / arr.Length;
-      return avg;
+      return max;
     }
   }
   
